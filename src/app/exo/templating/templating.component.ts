@@ -5,18 +5,16 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-templating',
   imports: [FormsModule],
   templateUrl: './templating.component.html',
-  styleUrl: './templating.component.css',
-
+  styleUrl: './templating.component.css'
 })
 export class TemplatingComponent {
 
-  oneWayProp : string = "Bonjooooour"
+  oneWayElement : string | undefined;
 
-  twoWayBinding : string = "Hello World"
+  twoWayElem : string = "Bonjour";
 
-  reset(){
-    this.oneWayProp = "Pomme"
-    this.twoWayBinding = "Pomme"
+  transfert(){
+    this.oneWayElement = this.twoWayElem
   }
 
 }

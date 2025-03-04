@@ -1,7 +1,10 @@
 import { Routes } from '@angular/router';
 import { DemoComponent } from './demo/demo.component';
 import { ExoComponent } from './exo/exo.component';
-import { TemplatingComponent } from './demo/templating/templating.component';
+import { TemplatingComponent as tDemo } from './demo/templating/templating.component';
+import { TemplatingComponent as tExo } from './exo/templating/templating.component';
+import { SignalComponent } from './demo/signal/signal.component';
+
 
 export const routes: Routes = [
   {
@@ -9,11 +12,30 @@ export const routes: Routes = [
     component : DemoComponent,
     children : [{
       path : 'templating',
-      component : TemplatingComponent
-    }]
+      component : tDemo
+    },
+    {
+      path: 'signal',
+      component : SignalComponent
+    },
+    {
+      path : '**',
+      redirectTo : 'templating'
+    }
+  ]
   },
   {
     path : 'exo',
-    component : ExoComponent
+    component : ExoComponent,
+    children : [
+      {
+        path : 'templating',
+        component : tExo
+      },
+      {
+        path : '**',
+        redirectTo : 'templating'
+      }
+    ]
   }
 ];

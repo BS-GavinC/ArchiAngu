@@ -1,0 +1,12 @@
+<p>poke works!</p>
+
+<button (click)="newPokemon()">Change pokemon</button>
+
+@if (monPokemon)
+{
+  <p>Nom : {{monPokemon.name}}.</p>
+  <p>Poids : {{monPokemon.weight / 10}}Kg.</p>
+  <p>Taille : {{monPokemon.height * 10}}Cm.</p>
+  <p>Image non contractuelle...</p>
+  <img [src]="monPokemon.sprites.front_default" alt="">
+}

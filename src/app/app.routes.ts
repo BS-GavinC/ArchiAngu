@@ -5,6 +5,7 @@ import { TemplatingComponent as tDemo } from './demo/templating/templating.compo
 import { TemplatingComponent as tExo } from './exo/templating/templating.component';
 import { SignalComponent } from './demo/signal/signal.component';
 import { PokemonComponent } from './demo/pokemon/pokemon.component';
+import { PokeComponent } from './exo/poke/poke.component';
 
 
 export const routes: Routes = [
@@ -36,6 +37,10 @@ export const routes: Routes = [
       {
         path : 'templating',
         component : tExo
+      },
+      {
+        path: 'poke',
+        component : PokeComponent
       },
       {
         path : '**',

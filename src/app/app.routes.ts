@@ -4,6 +4,7 @@ import { ExoComponent } from './exo/exo.component';
 import { TemplatingComponent as tDemo } from './demo/templating/templating.component';
 import { TemplatingComponent as tExo } from './exo/templating/templating.component';
 import { SignalComponent } from './demo/signal/signal.component';
+import { PokemonComponent } from './demo/pokemon/pokemon.component';
 
 
 export const routes: Routes = [
@@ -17,6 +18,10 @@ export const routes: Routes = [
     {
       path: 'signal',
       component : SignalComponent
+    },
+    {
+      path : 'pokemon',
+      component : PokemonComponent
     },
     {
       path : '**',
